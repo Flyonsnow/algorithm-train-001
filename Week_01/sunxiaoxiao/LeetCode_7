@@ -1,0 +1,17 @@
+class Solution {
+    public int reverse(int x) {
+        try {
+            if (x < 0){
+                String stringBuilder = new StringBuilder(String.valueOf(Math.abs(x))).reverse().toString();
+                return Integer.valueOf(stringBuilder) * -1;
+            }else {
+                String stringBuilder = new StringBuilder(String.valueOf(x)).reverse().toString();
+                return Integer.valueOf(stringBuilder);
+            }
+        }catch (Exception e){
+            return 0;
+        }
+
+    }
+
+}
