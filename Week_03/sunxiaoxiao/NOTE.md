@@ -30,3 +30,23 @@ class Solution {
         return stack.isEmpty();
     }
 }
+
+
+
+leetcode_14
+import org.apache.logging.log4j.util.*;
+
+//leetcode submit region begin(Prohibit modification and deletion)
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length ==0) return "";
+        String one = strs[0];
+        for (int j = 1;j<strs.length;j++){
+            while (strs[j].indexOf(one) != 0){
+                one = one.substring(0,one.length()-1);
+                if (one.isEmpty()) return "";
+            }
+        }
+        return  one;
+    }
+}
